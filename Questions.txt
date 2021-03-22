@@ -1,0 +1,56 @@
+
+Questions to be addressed -
+-- Top 5 best restaurants for families
+-- Top 5 worst restaurants based on service rating
+-- Does Parking lot affect the rating
+-- Which City has more no of good restaurants
+-- Does alcohol/no alcohol affect the user rating
+-- No of restaurants based on cusine
+
+
+-- Does Parking lot affect the rating
+
+SELECT
+FROM 
+
+drop the address field geoplaces
+modify the ddl for removal of double quotes
+
+restaurant_rating_db
+
+SELECT
+FROM 
+
+
+DROP TABLE CUISINE CASCADE;
+DROP TABLE PARKING CASCADE;
+DROP TABLE RATING CASCADE;
+DROP TABLE GEOPLACES CASCADE;
+DROP TABLE USER_PROFILE CASCADE;
+
+Restaurant Data with Consumer Ratings
+
+
+
+Restaurant Related Information
+Restaurant Ratings
+Restaurant Cuisine Speciality
+Restaurant Parking Availability
+
+
+In order to transform the restaurant data and use it in our study we performed the following:
+Reviewed the Datasets and transformed into data frames
+Selected the specific columns from Datasets with respect to observations
+Used Pandas functions to rename the columns to avoid data load failure with Postgres
+Used Pandas functions to catch Missing/Null values
+Some of the Datasets had "?" as opposed to Missing/Null values, we have replaced them with 'Not Recorded' to avoid Referential Integrity errors for Postgres.
+Used Pandas functions to catch the duplicate values and drop them to get the clean Dataset
+Used Pandas functions to load all 5 CSV Datasets into Postgres Database.
+
+Created queries to address our hypothesis by grouping the data by state and getting the sum of the number of people killed and the number of people injured. We sorted the data in descending order so we could visually see which state had the highest numbers.
+
+
+
+After we pulled in the CSV files and loaded them into the data frames, we did an initial connection to the Postgres database using PG admin to store our transformed data sets. 
+We used the quick database website to create the initial table schema that got loaded into the Postgres database that generated the first set of tables by maintaining the Referential integrity.
+Finally, we executed the queries in Postgres to pull only relevant information needed to get answers to obervations.
